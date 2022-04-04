@@ -1,26 +1,2 @@
 @charset "utf-8";
 
-body {background: #fafafa;}
-footer {text-align: center; margin-top: 100px; color: #8e8e8e; font-size: 12px; }
-@media(max-width:1800px) {
-	.wrap {padding-right: 15px; padding-left: 15px;}
-}
-
-
-/*login-wrap*/
-.login-wrap {width: 396px; margin: 0 auto; margin-top: 180px;text-align: center;  }
-.login-wrap > div {background: #fff; border: 1px solid #ddd; }
-.login-wrap .group-top {min-height: 330px; padding: 36px 45px;}
-.login-wrap .group-top > .logo {margin-bottom: 40px;}
-.login-wrap .group-top input { width: 100%;border: 1px solid #dbdbdb;background: #fafafa; padding: 10px 15px; border-radius: 5px;}
-.login-wrap .group-top input:not(:last-of-type) {margin-bottom: 8px;}
-.login-wrap .group-top .button {background: #0095f6; width: 100%; color: #fff; margin-top: 15px; display: block; border-radius: 3px;padding: 5px 5px;font-size: 14px;}
-.login-wrap .group-bottom {margin-top: 13px;padding: 21px 15px;}
-.login-wrap .group-bottom .button {color: #0095f6;  margin-left: 10px;}
-
-
-
-@media(max-width:780px) {
-	.login-wrap {width: 100%; }
-	.login-wrap .group-top {padding: 36px 20px;}
-}
