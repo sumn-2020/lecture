@@ -6,7 +6,7 @@
     <meta http-eqrndv="X-UA-Compatible" content="IE=Edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
     <meta name="format-detection" content="telephone=no" />
-    <title>목록 | 인스타그램</title>
+    <title>상세 | 인스타그램</title>
     <!-- css -->
     <link rel="stylesheet" href="resources/css/fonts.css">
     <link rel="stylesheet" href="resources/css/bootstrap.min.css">
@@ -25,6 +25,7 @@
 	<!--wrap-->
 	<div class="wrap">
 		
+			
 		<!-- header -->
 		<header class="header">
             <div class="layout">
@@ -32,24 +33,23 @@
                 <div class="utill-wrap">
                     <a href="" class="link"><img src="resources/images/ico-link.png" alt="등록" title="등록페이지 바로가기"></a>
 
-                    <!-- 로그인 전 profile -->
-                    <!-- <div class="profile">
-                        <a href="">로그인전</a>
+                    <!-- 로그인 전 profile-wrap -->
+                    <!--<div class="profile-wrap">
+                        <a href="#"><img src="resources/images/ico-login.png" alt="로그인 전"></a>
                     </div> -->
-                    <!--  // 로그인 전 profile -->
+                    <!--  // 로그인 전 profile-wrap -->
 
-                    <!-- 로그인 후 profile-->
-                    <div class="profile dropdown">
-                        <button type="button" class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <span><img src="" alt="프로필사진"></span>나이키 님
+                    <!-- 로그인 후 profile-wrap -->
+                    <div class="profile-wrap dropdown">
+                        <button type="button" class="dropdown-toggle">
+                            <span class="profile"><img src="resources/images/sample.jpg" alt="프로필사진"></span>
+                            <strong>나이키 님</strong>
                         </button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" href="#">Action</a>
-                            <a class="dropdown-item" href="#">Another action</a>
-                            <a class="dropdown-item" href="#">Something else here</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">로그아웃</a>
                         </div>
                     </div>
-                    <!--  //로그인 후 profile-->
+                    <!--  //로그인 후 profile-wrap -->
 
                 </div>
             </div>
@@ -57,29 +57,51 @@
 		<!-- // header -->
 
 
-		<!-- list-wrap -->
-		<div class="list-wrap">
-            <div class="layout">
-                <div class="list-info">
-                    <div class="img-wrap"><img src="resources/images/sample.jpg" alt="프로필사진"></div>
-                    <div class="info">
-                        <strong class="nickname">nike</strong>
-                        <span class="count">게시물 <b>876</b></span>
-                        <p><strong>나이키 더 현대 서울점</strong> <br> MAKE SPORT A DAILY HABIT</p> 
-                    </div>
-                </div>
-
-                <ul class="list-cont">
-                    <li><a href=""><img src="resources/images/sample.jpg" alt=""></a></li>
-                    <li><a href=""><img src="resources/images/sample.jpg" alt=""></a></li>
-                    <li><a href=""><img src="resources/images/sample.jpg" alt=""></a></li>
-                    <li><a href=""><img src="resources/images/sample.jpg" alt=""></a></li>
-                    <li><a href=""><img src="resources/images/sample.jpg" alt=""></a></li>
-                    <li><a href=""><img src="resources/images/sample.jpg" alt=""></a></li> 
-                </ul>
+		<!-- detail-wrap -->
+		<div class="detail-wrap">
+         	<div class="layout">
+          
+				<div class="img-wrap"><img src="resources/images/sample.jpg" alt="신발이미지"></div>
+				
+				<!--right-part-->
+				<div class="right-part">
+				
+					<!--profile-wrap-->
+					<div class="profile-wrap group-top">
+						<div class="profile"><img src="resources/images/sample.jpg" alt="프로필사진"></div>
+						<strong>nike</strong>
+						<a href="#" class="btn-del"><img src="resources/images/dot.png" alt="삭제버튼"></a>
+					</div>
+					<!-- //profile-wrap-->
+					
+					<!--group-bottom-->
+					<ul class="group-bottom">
+						<li>
+							<div class="profile-wrap">
+								<div class="profile"><img src="resources/images/sample.jpg" alt="프로필사진"></div>
+							</div>
+							<div class="txt"><strong>nike</strong>나이키나이키나이키나이키나이키나이키나이키나이키나이키나이키나이키나이키나이키나이키나이키나이키나이키나이키
+								<button type="button" class="comment">답글달기</button>
+							</div>
+						</li>
+					</ul>
+					<!-- //group-bottom-->
+					
+					<!--form-wrap-->
+					<div class="form-wrap">
+						<img src="resources/images/comment.png" alt="">
+						<textarea placeholder="댓글 달기.."></textarea>
+						<button type="button" class="button">게시</button>
+					</div>
+					<!-- //form-wrap-->
+					
+				</div>
+          		<!-- //right-part-->
+           
+           
             </div>
 		</div>
-		<!-- // list-wrap -->
+		<!-- // detail-wrap -->
 
 
 		<footer>@2022 Instagram from Meta</footer>
