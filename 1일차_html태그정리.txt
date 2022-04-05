@@ -1,0 +1,26 @@
+1) 제목태그 : <h1></h1> ~ <h6></h6>
+2) 문장태그 : <p></p>
+3) 링크 :  <a href="url주소" target="_blank"></a>
+4) 이미지  :  <img src="경로">
+5) 입력창  :  <input type="text">
+	<input type="passwowrd"'>
+	<input type="file">
+	<input type="radio">
+	<input type="checkbox">
+	<input type="number">
+	<input type=""....
+
+6) 선택 :  <select>
+		<option>sdfsdfsdf</option>
+		<option>sdfsdfsdf</option>
+		<option>sdfsdfsdf</option>
+		<option>sdfsdfsdf</option>
+	</select>
+
+7) 줄바꿈 : <br>
+8) 강조 : <strong></strong>
+9)  강조 : <b></b>
+10) 이탤릭 : <i></i> / <em></em>
+
+
+

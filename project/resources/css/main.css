@@ -1,10 +1,15 @@
 @charset "utf-8";
 
 body {background: #fafafa;}
-footer {text-align: center; margin-top: 100px; color: #8e8e8e; font-size: 12px; }
+
 @media(max-width:1800px) {
 	.wrap {padding-right: 15px; padding-left: 15px;}
 }
+
+
+/*header*/
+
+
 
 
 
@@ -28,3 +33,8 @@ footer {text-align: center; margin-top: 100px; color: #8e8e8e; font-size: 12px; 
 .profile-photo {width: 100px;height: 100px; position: relative; border-radius: 600px;background-color: #fafafa;border: 1px solid #d9d9d9;margin: 20px auto;}
 .profile-photo label {  height: 100%; cursor: pointer;  display: flex;justify-content: center;align-items: center; }
 
+
+
+
+/* footer */
+footer {text-align: center; margin-top: 100px; color: #8e8e8e; font-size: 12px; }
