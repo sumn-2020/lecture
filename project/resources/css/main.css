@@ -8,9 +8,22 @@ body {background: #fafafa;}
 
 
 /*header*/
+.header {background: #fff; padding: 15px 0; border-bottom: 1px solid #ddd; }
+.header:after {content: ""; display: block; clear: both;}
+.header h1 {float: left;}
+.header .utill-wrap {float: right; display: flex;}
+.header .utill-wrap .link {}
 
 
 
+
+
+
+
+
+
+/* footer */
+footer {text-align: center; margin-top: 100px; color: #8e8e8e; font-size: 12px; }
 
 
 /*login-wrap 로그인*/
@@ -35,6 +48,3 @@ body {background: #fafafa;}
 
 
 
-
-/* footer */
-footer {text-align: center; margin-top: 100px; color: #8e8e8e; font-size: 12px; }
