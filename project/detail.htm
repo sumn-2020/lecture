@@ -30,7 +30,7 @@
             
             // 대댓글보기 클릭시 열고닫힘 토글 
             $('.btn-reply').click(function () {
-                $(this).toggleClass('on');
+				$('.reply').toggleClass('on');
             });
             
             // 대댓글보기 클릭시 열고닫힘 토글 
@@ -158,13 +158,23 @@
 					</ul>
 					<!-- //group-bottom-->
 					
-					<!--form-wrap-->
-					<div class="form-wrap">
-						<img src="resources/images/comment.png" alt="">
-						<textarea placeholder="댓글 달기.." id="textBox"></textarea>
-						<button type="button" class="button">게시</button>
+					<!--bottom-part-->
+					<div class="bottom-part">
+							<!--like-wrap-->
+							<div class="like-wrap active">
+								<button type="button"><i class="ico-like"></i>좋아요</button>
+							</div>
+							<!-- //like-wrap-->
+
+							<!--form-wrap-->
+							<div class="form-wrap">
+								<img src="resources/images/comment.png" alt="">
+								<textarea placeholder="댓글 달기.." id="textBox"></textarea>
+								<button type="button" class="button">게시</button>
+							</div>
+							<!-- //form-wrap-->
 					</div>
-					<!-- //form-wrap-->
+					<!-- //bottom-part-->
 					
 				</div>
           		<!-- //right-part-->

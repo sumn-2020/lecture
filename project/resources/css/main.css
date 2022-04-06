@@ -83,14 +83,19 @@ footer {text-align: center;    margin: 50px 0; color: #8e8e8e; font-size: 12px; 
 .detail-wrap .right-part .group-bottom li .comment-wrap {}
 .detail-wrap .right-part .group-bottom li .comment {color: #8e8e8e; font-size: 12px; margin-top: 16px; }
 .detail-wrap .right-part .group-bottom li .btn-del {margin-left: 9px;}
-.detail-wrap .right-part .reply { padding-left: 35px;}
-.detail-wrap .right-part .btn-reply {position: relative; padding-left: 40px;margin-left: 39px;color: #8e8e8e; font-size: 12px; margin-top: 16px; }
+.detail-wrap .right-part .reply { display: none;  padding-left: 35px;}
+.detail-wrap .right-part .reply.on{display: block;}
+.detail-wrap .right-part .btn-reply {  position: relative; padding-left: 40px;margin-left: 39px;color: #8e8e8e; font-size: 12px; margin-top: 16px; }
 .detail-wrap .right-part .btn-reply:after {content: ""; display: block; width:24px; height: 1px; background:  #8e8e8e; position: absolute; left: 0; top: 50%; margin-top: -0.5px;}
-.detail-wrap  .form-wrap {position: absolute; bottom: 0; width: 100%;border-top: 1px solid #efefef;    padding: 6px 16px;}
-.detail-wrap  .form-wrap img {position: absolute;top: 14px;}  
-.detail-wrap  .form-wrap textarea {width: calc(113% - 70px); height: 38px;max-height: 80px; resize: none; border: 0; background: transparent;  padding: 7px 22px 7px 40px;}
-.detail-wrap  .form-wrap textarea::placeholder {font-size: 14px; font-weight: 300;}
-.detail-wrap  .form-wrap .button { color: #0095f6;font-weight: 600; position: absolute; right: 16px; top: 13px; font-size: 14px;}
+.detail-wrap .bottom-part {position: absolute; bottom: 0;width: 100%;}
+.detail-wrap .like-wrap {}
+.detail-wrap .like-wrap i {background: url(../images/like.png) no-repeat;width: 26px; height: 23px; vertical-align: middle;display: inline-block;}
+.detail-wrap .like-wrap.active i {background: url(../images/like-hover.png) no-repeat;}
+.detail-wrap .form-wrap { border-top: 1px solid #efefef; padding: 6px 16px; position: relative;}
+.detail-wrap .form-wrap img {position: absolute;top: 14px;}  
+.detail-wrap .form-wrap textarea {width: calc(113% - 70px); height: 38px;max-height: 80px; resize: none; border: 0; background: transparent;  padding: 7px 22px 7px 40px;}
+.detail-wrap .form-wrap textarea::placeholder {font-size: 14px; font-weight: 300;}
+.detail-wrap .form-wrap .button { color: #0095f6;font-weight: 600; position: absolute; right: 16px; top: 13px; font-size: 14px;}
    
 .profile-wrap{position: relative; }
 .profile-wrap .profile{width: 29px;height: 29px;display: inline-block;overflow: hidden;border-radius: 600px;vertical-align: middle;}
