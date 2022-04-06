@@ -1,0 +1,31 @@
+- vscode 단축키 
+1)  html 기본 자동완성 : ! + Tab
+2)  alt + shift + f : 자동정렬 
+3) alt + 커서 : 다중커서 
+4) alt + 위아래 화살표 : 해당 커서가 있는 행 이동 
+5) alt + shift + 위아래 화살표 : 해당 커서가 있는 행 복사 
+6) ctrl + shift + k : 해당 커서가 있는 행 삭제 
+7) shift + alt + a : 여러줄 주석 
+8)  ctrl + / : 한줄 주석 
+9) ctrl + enter : 커서가 위치한 곳 아래 줄에 빈 행을 삽입 
+10) ctrl + shift + enter : 커서가 위치한 곳 윗 줄에 빈 행을 삽입 
+
+- 기본단축키 
+11) ctrl + c : 복사하기 
+12) ctrl + x :  선택범위 잘라내기 
+13) shift + 오른쪽왼쪽 화살표 : 범위설정하기 
+14) shift + end : 한줄 범위설정하기 (맨끝으로)
+15) shift + home: 한줄 범위 설정하기 (처음으로)
+16) shift + 위아래 화살표 : 위로/아래로 범위 설정하기 
+17) ctrl + shift + home: 위로 전체 범위설정 
+18) ctrl + shift + end : 아래로 전체 범위설정 
+19) ctrl + shift + tab : 브라우저 탭 변경 
+20)  window + d : 모든 창 내리기 
+21) ctrl + z : 되돌리기 
+22) ctrl + y : 되돌렸던거 다시되돌리기  
+23) ctrl + w : 현재탭 닫기 
+24) ctrl + shift + tab : 닫은탭 되돌리기 
+
+
+
+
