@@ -59,9 +59,11 @@
 방법2) class : <div class="className"></div> (중복가능)
 
 
-
-
-
+============================================================
+<파일경로>
+html을 기준으로 
+- 이미지가 하위에 있을경우: resources/images/sample.png  
+- 이미지가 상위에 있을경우: ../images/sample.png
 
 
 
