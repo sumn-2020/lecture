@@ -1,15 +1,16 @@
+<태그종류>
 1) 제목태그 : <h1></h1> ~ <h6></h6>
 2) 문장태그 : <p></p>
 3) 링크 :  <a href="url주소" target="_blank"></a>
 4) 이미지  :  <img src="경로">
-5) 입력창  :  <input type="text">
-	<input type="passwowrd"'>
-	<input type="file">
-	<input type="radio">
-	<input type="checkbox">
-	<input type="number">
+5) 입력창  :  <input type="text" placeholder="">
+	<input type="passwowrd"' placeholder="">
+	<input type="file" placeholder="">
+	<input type="radio" placeholder="">
+	<input type="checkbox" placeholder="">
+	<input type="number" placeholder="">
 	<input type=""....
-
+5-1) 긴 텍스트 쓸수있는 입력창 :  <textarea placeholder=""></textarea>
 6) 선택 :  <select>
 		<option>sdfsdfsdf</option>
 		<option>sdfsdfsdf</option>
@@ -20,7 +21,48 @@
 7) 줄바꿈 : <br>
 8) 강조 : <strong></strong>
 9)  강조 : <b></b>
-10) 이탤릭 : <i></i> / <em></em>
+10) 이탤릭 : <i></i> / <em></em> 
+11) 리스트 : <ul><li></li></ul> 
+12) 강조: <strong></strong>
+13) 이탤릭 : <i></i>
+14) 줄바꿈: <br>
+15) 버튼: <button type="button"></button>
+16) 주석 : <!-- 주석내용이 들어갑니다 -->
+17) 테이블: <table></table> 
+17_1) 행 가로로 합치기 : <td colspan="3"></td>
+17_2) 열 가로로 합치기 : <td rowspan="3"></td>
+18) 의미없는 태그 : 
+	<div></div>   - 블록태그
+	<span></span> - 인라인태그 
+
+
+============================================================
+<블록요소와 인라인요소>
+1) 인라인요소를 가진 태그  - 나란히 되는 속성 
+- b, strong, i, em
+- span,
+- input 
+- a 
+- img
+- button
+- select
+- table
+
+
+2) 블록요소를 가진 태그 - 한 줄 속성 
+- ul li/ol li / dl dt dd 
+- div
+
+============================================================
+<선택자 - 태그에 이름 정해주기>
+방법1) id : <div id="idName"></div>  (중복되면 안됨)
+방법2) class : <div class="className"></div> (중복가능)
+
+
+
+
+
+
 
 
 
