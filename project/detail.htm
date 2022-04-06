@@ -18,6 +18,38 @@
     <script type="text/javascript" src="resources/js/jquery-3.4.1.min.js"></script>
     <script type="text/javascript" src="resources/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="resources/js/style.js"></script>
+    
+    
+    
+    <script>
+        $(document).ready(function(){
+            //댑글달기 버튼 클릭시 textarea 포커스주기 
+            $('.comment').click(function () {
+                $('#textBox').focus();
+            });
+            
+            // 대댓글보기 클릭시 열고닫힘 토글 
+            $('.btn-reply').click(function () {
+                $(this).toggleClass('on');
+            });
+            
+            // 대댓글보기 클릭시 열고닫힘 토글 
+            $('.btn-del').click(function () {
+                $('.modal-del, .mask').toggle();
+            });
+            $('.btn-cancel').click(function() {
+                $('.modal-del, .mask').hide();
+            });
+            
+            
+            
+            
+        });
+    </script>
+    
+    
+    
+    
 </head>
 
 
@@ -81,8 +113,38 @@
 								<div class="profile"><img src="resources/images/sample.jpg" alt="프로필사진"></div>
 							</div>
 							<div class="txt"><strong>nike</strong>나이키나이키나이키나이키나이키나이키나이키나이키나이키나이키나이키나이키나이키나이키나이키나이키나이키나이키
-								<button type="button" class="comment">답글달기</button>
+                                <div class="comment-wrap">
+								    <button type="button" class="comment">답글달기</button> 
+                                    <button type="button" class="btn-del"><img src="resources/images/dot.png" alt="삭제버튼"></button>
+                                </div>
 							</div>
+                            <button type="button" class="btn-reply">답글 보기(1개)</button>
+                            <!--reply-->
+                            <ul class="reply">
+                                <li>
+                                    <div class="profile-wrap">
+                                        <div class="profile"><img src="resources/images/sample.jpg" alt="프로필사진"></div>
+                                    </div>
+                                    <div class="txt"><strong>nike</strong>나이키나이키나이키나이키나이키나이키나이키나이키나이키나이키나이키나이키나이키나이키나이키나이키나이키나이키
+                                        <div class="comment-wrap">
+                                            <button type="button" class="comment">답글달기</button> 
+                                            <button type="button" class="btn-del"><img src="resources/images/dot.png" alt="삭제버튼"></button>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="profile-wrap">
+                                        <div class="profile"><img src="resources/images/sample.jpg" alt="프로필사진"></div>
+                                    </div>
+                                    <div class="txt"><strong>nike</strong>나이키나이키나이키나이키나이키나이키나이키나이키나이키나이키나이키나이키나이키나이키나이키나이키나이키나이키
+                                        <div class="comment-wrap">
+                                            <button type="button" class="comment">답글달기</button> 
+                                            <button type="button" class="btn-del"><img src="resources/images/dot.png" alt="삭제버튼"></button>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <!-- //reply-->
 						</li>
 					</ul>
 					<!-- //group-bottom-->
@@ -90,7 +152,7 @@
 					<!--form-wrap-->
 					<div class="form-wrap">
 						<img src="resources/images/comment.png" alt="">
-						<textarea placeholder="댓글 달기.."></textarea>
+						<textarea placeholder="댓글 달기.." id="textBox"></textarea>
 						<button type="button" class="button">게시</button>
 					</div>
 					<!-- //form-wrap-->
@@ -102,6 +164,16 @@
             </div>
 		</div>
 		<!-- // detail-wrap -->
+        
+        <!--modal-del-->
+        <div class="modal-del">
+            <div class="inner">
+                <a href="#" class="btn txt-red">삭제하기</a>
+                <a href="#" class="btn btn-cancel">취소</a>
+            </div> 
+        </div>
+        <div class="mask"></div>
+        <!-- //modal-del-->
 
 
 		<footer>@2022 Instagram from Meta</footer>

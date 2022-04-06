@@ -85,13 +85,18 @@ footer {text-align: center;    margin: 50px 0; color: #8e8e8e; font-size: 12px; 
 .detail-wrap .right-part .profile-wrap .profile{width: 29px;height: 29px;display: inline-block;overflow: hidden;border-radius: 600px;vertical-align: middle;}
 .detail-wrap .right-part .profile-wrap strong {font-weight: 600; color: #000; margin-left: 5px;}
 .detail-wrap .right-part .profile-wrap .btn-del { position: absolute; right: 16px;}
-
 .detail-wrap .right-part .group-bottom {padding: 16px;}
 .detail-wrap .right-part .group-bottom li {padding: 12px 0;}
-.detail-wrap .right-part .group-bottom li > * {display: inline-block; vertical-align: top;}
+.detail-wrap .right-part .group-bottom li .profile-wrap,
+.detail-wrap .right-part .group-bottom li .txt {display: inline-block; vertical-align: top;}
 .detail-wrap .right-part .group-bottom li .txt strong {padding-right: 8px;color: #000;font-weight: 600;}
 .detail-wrap .right-part .group-bottom li .txt {width: calc(100% - 40px);padding-left: 15px; font-size: 14px; line-height: 21px;}
-.detail-wrap .right-part .group-bottom li .comment {color: #8e8e8e; font-size: 12px; margin-top: 16px; display: block;}
+.detail-wrap .right-part .group-bottom li .comment-wrap {}
+.detail-wrap .right-part .group-bottom li .comment {color: #8e8e8e; font-size: 12px; margin-top: 16px; }
+.detail-wrap .right-part .group-bottom li .btn-del {margin-left: 9px;}
+.detail-wrap .right-part .reply { padding-left: 35px;}
+.detail-wrap .right-part .btn-reply {position: relative; padding-left: 40px;margin-left: 39px;color: #8e8e8e; font-size: 12px; margin-top: 16px; }
+.detail-wrap .right-part .btn-reply:after {content: ""; display: block; width:24px; height: 1px; background:  #8e8e8e; position: absolute; left: 0; top: 50%; margin-top: -0.5px;}
 
 .detail-wrap  .form-wrap {position: absolute; bottom: 0; width: 100%;border-top: 1px solid #efefef;    padding: 6px 16px;}
 .detail-wrap  .form-wrap img {position: absolute;top: 14px;}  
@@ -99,5 +104,30 @@ footer {text-align: center;    margin: 50px 0; color: #8e8e8e; font-size: 12px; 
 .detail-wrap  .form-wrap textarea::placeholder {font-size: 14px; font-weight: 300;}
 .detail-wrap  .form-wrap .button { color: #0095f6;font-weight: 600; position: absolute; right: 16px; top: 13px; font-size: 14px;}
    
+.modal-del {display: none;  position: fixed; max-width: 400px; margin: 0 auto; top: 30%;transform: translate(-50%, 0px); left: 50%;  z-index:9; border-radius: 5px;background: #fff; }
+.modal-del .inner { width: 400px; margin: 0 auto;text-align: center}
+.modal-del .inner .btn {display: block;  color: #000;font-weight: 600;border-bottom: 1px solid #dbdbdb; padding: 10px 12px;}
+.modal-del .inner .btn:last-of-type {border-bottom: 0;}
+.modal-del .inner .btn.txt-red {color: #ed4956;font-weight: 900;}
+.mask { display: none;  background: rgb(0 0 0 / 75%); position: fixed; top: 0; width: 100%; height: 100%; }
+
+
+@media (max-width: 1800px) {
+    .detail-wrap{padding-right: 15px; padding-left: 15px;}
+    .detail-wrap .layout {padding: 0;}
+}
+
+@media (max-width: 1024px) {
+    .detail-wrap .layout {display: block;}
+    .detail-wrap .right-part {width: 100%; }
+    .detail-wrap .form-wrap {position: relative; }
+}
+
+
+
+
+
+
+
 
 
