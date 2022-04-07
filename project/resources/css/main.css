@@ -136,11 +136,19 @@ footer {text-align: center;    margin: 50px 0; color: #8e8e8e; font-size: 12px; 
 .edit-wrap .textarea-wrap textarea { width: 100%; resize: none; border: 0; min-height: 324px; }
 .edit-wrap .edit-bottom {padding: 15px 25px; border-top: 1px solid #ddd;}
 .edit-wrap .edit-bottom:after {content: ""; display: block; clear: both;}
-.edit-wrap .edit-bottom .file-upload {float: left;padding: 6px 0;}
 .edit-wrap .edit-bottom .btn-wrap {float: right;}
 .edit-wrap .edit-bottom .btn-wrap .button {padding: 8px 15px; border-radius: 5px; font-weight: 600;}
 .edit-wrap .edit-bottom .btn-wrap .btn-cancel { background: #dedede; color: #100d0e;}
 .edit-wrap .edit-bottom .btn-wrap .btn-confirm { background: #0193f4;color: #fff;}
+
+.edit-wrap .file-upload {position: relative;float: left;padding: 6px 0; display: flex;}
+.edit-wrap .file-upload label { text-indent: -999px;}
+.edit-wrap .file-upload label:after {content: "";display: block; background: url(../images/fild-upload.png) no-repeat; position: absolute; left: 0;top: 50%;width: 26px;height: 24px; transform: translate(0, -50%);}
+.edit-wrap .file-upload input {padding: 5px 10px;margin-left: 27px;}
+.edit-wrap .file-upload input::file-selector-button { display: none; }
+
+
+
 
 @media (max-width: 780px) {
     .edit-wrap .edit-bottom .file-upload {float: none;}
