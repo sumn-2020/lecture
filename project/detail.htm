@@ -49,6 +49,12 @@
             $('.btn-cancel').click(function() {
                 $('.modal-del, .mask').hide();
             });
+            
+            
+            // 좋아요 클릭시 토글 
+            $('.btn-like').click(function(){
+                $(this).toggleClass('active');
+            });
 			
 			
   
@@ -161,9 +167,7 @@
 					<!--bottom-part-->
 					<div class="bottom-part">
 							<!--like-wrap-->
-							<div class="like-wrap active">
-								<button type="button"><i class="ico-like"></i>좋아요</button>
-							</div>
+                            <button type="button" class="btn-like"><i class="ico-like"></i>좋아요<strong>1개</strong></button>
 							<!-- //like-wrap-->
 
 							<!--form-wrap-->
