@@ -44,7 +44,7 @@ footer {text-align: center;    margin: 50px 0; color: #8e8e8e; font-size: 12px; 
 
 
 /* join 회원가입 */
-.profile-photo {width: 100px;height: 100px; position: relative; border-radius: 600px;background-color: #fafafa;border: 1px solid #d9d9d9;margin: 20px auto;}
+.profile-photo {width: 100px;height: 100px; position: relative; border-radius: 600px;background-color: #fafafa;border: 1px solid #d9d9d9;margin: 20px auto;overflow: hidden;}
 .profile-photo label {  height: 100%; cursor: pointer;  display: flex;justify-content: center;align-items: center; }
 
 
@@ -140,6 +140,7 @@ footer {text-align: center;    margin: 50px 0; color: #8e8e8e; font-size: 12px; 
 .edit-wrap .edit-bottom .btn-wrap {float: right;}
 .edit-wrap .edit-bottom .btn-wrap .button {padding: 8px 15px; border-radius: 5px; font-weight: 600;}
 .edit-wrap .edit-bottom .btn-wrap .btn-cancel { background: #dedede; color: #100d0e;}
+.edit-wrap .edit-bottom .btn-wrap .btn-del-red {background: #ea0000; color: #fff;}
 .edit-wrap .edit-bottom .btn-wrap .btn-confirm { background: #0193f4;color: #fff;}
 
 .edit-wrap .file-upload {position: relative;float: left;padding: 6px 0; display: flex;}
