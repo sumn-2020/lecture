@@ -33,23 +33,40 @@
 				$('.reply').toggleClass('on');
             });
             
-            // 대댓글보기 클릭시 열고닫힘 토글 
-			var modalTarget = $(".modal-del");
+            
+			var modalTarget = $("#modalDel");
+			var modalTarget2 = $("#modalDelComment");
 			var mask = $('.mask');
-            $('.btn-del').click(function (event) {
+			
+			//전체글 삭제 
+            $('#btnDel').click(function (event) {
 				event.stopPropagation(); 
 				modalTarget.toggle();
 				mask.toggle();
-				$('.dropdown-menu').hide();
             });
-			$(document).click(function(){ //외부클릭시 닫힘
+
+			//답글달기 삭제
+            $('.btn-del-comment').click(function (event) {
+				event.stopPropagation(); 
+				modalTarget2.toggle();
+				mask.toggle();
+            });
+			
+		
+			//모달창 속 취소버큰 클릭시 삭제
+            $('.btn-cancel').click(function() {
+                modalTarget.hide();
+				modalTarget2.hide();
+				mask.hide();
+            });
+			
+			//외부클릭시 닫힘
+			$(document).click(function(){ 
 				modalTarget.hide();
+				modalTarget2.hide();
 				mask.hide();
 			});
-            $('.btn-cancel').click(function() {
-                $('.modal-del, .mask').hide();
-            });
-            
+			
             
             // 좋아요 클릭시 토글 
             $('.btn-like').click(function(){
@@ -117,7 +134,7 @@
 					<div class="profile-wrap group-top">
 						<div class="profile"><img src="resources/images/sample.jpg" alt="프로필사진"></div>
 						<strong>nike</strong>
-						<a href="#" class="btn-del"><img src="resources/images/dot.png" alt="삭제버튼"></a>
+						<a href="#" id="btnDel" class="btn-del"><img src="resources/images/dot.png" alt="삭제버튼"></a>
 					</div>
 					<!-- //profile-wrap-->
 					
@@ -130,7 +147,7 @@
 							<div class="txt"><strong>nike</strong>나이키나이키나이키나이키나이키나이키나이키나이키나이키나이키나이키나이키나이키나이키나이키나이키나이키나이키
                                 <div class="comment-wrap">
 								    <button type="button" class="comment">답글달기</button> 
-                                    <button type="button" class="btn-del"><img src="resources/images/dot.png" alt="삭제버튼"></button>
+                                    <button type="button" class="btn-del btn-del-comment"><img src="resources/images/dot.png" alt="삭제버튼"></button>
                                 </div>
 							</div>
                             <button type="button" class="btn-reply">답글 보기(1개)</button>
@@ -143,7 +160,7 @@
                                     <div class="txt"><strong>nike</strong>나이키나이키나이키나이키나이키나이키나이키나이키나이키나이키나이키나이키나이키나이키나이키나이키나이키나이키
                                         <div class="comment-wrap">
                                             <button type="button" class="comment">답글달기</button> 
-                                            <button type="button" class="btn-del"><img src="resources/images/dot.png" alt="삭제버튼"></button>
+                                            <button type="button" class="btn-del btn-del-comment"><img src="resources/images/dot.png" alt="삭제버튼"></button>
                                         </div>
                                     </div>
                                 </li>
@@ -153,8 +170,8 @@
                                     </div>
                                     <div class="txt"><strong>nike</strong>나이키나이키나이키나이키나이키나이키나이키나이키나이키나이키나이키나이키나이키나이키나이키나이키나이키나이키
                                         <div class="comment-wrap">
-                                            <button type="button" class="comment">답글달기</button> 
-                                            <button type="button" class="btn-del"><img src="resources/images/dot.png" alt="삭제버튼"></button>
+                                            <button type="button" class="comment">답글달기</button>
+                                            <button type="button" class="btn-del btn-del-comment"><img src="resources/images/dot.png" alt="삭제버튼"></button>
                                         </div>
                                     </div>
                                 </li>
@@ -189,15 +206,23 @@
 		<!-- // detail-wrap -->
         
         <!--modal-del-->
-        <div class="modal-del">
+        <div id="modalDel" class="modal-del">
             <div class="inner">
                 <a href="#" class="btn txt-red">삭제</a>
                 <a href="edit.htm" class="btn">수정</a>
                 <a href="#" class="btn btn-cancel">취소</a>
             </div> 
         </div>
-        <div class="mask"></div>
         <!-- //modal-del-->
+        <!--modal-del-->
+        <div id="modalDelComment" class="modal-del">
+            <div class="inner">
+                <a href="#" class="btn txt-red">삭제</a>
+                <a href="#" class="btn btn-cancel">취소</a>
+            </div> 
+        </div>
+        <!-- //modal-del-->
+        <div class="mask"></div>
 
 
 		<footer>@2022 Instagram from Meta</footer>
