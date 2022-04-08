@@ -29,7 +29,7 @@
 						reader.onload = function (e) {
 								$('#holder').show();
 								$('#holder').append('<img src="' + e.target.result + '">');
-								//$('#holder img').attr('src', e.target.result);
+                                $('.file-group').hide();
 						}
 						reader.readAsDataURL(input.files[0]);
 				}
@@ -52,17 +52,23 @@
 
 			<!--group-top-->
 			<div class="group-top">
+                
+                <!--logo-wrap-->
 				<div class="logo-wrap">
 					<h1 class="logo"><img src="resources/images/logo.png" alt="인스타그램" /></h1>
 					<span>친구들의 사진과 동영상을 보려면 가입하세요. </span>
 				</div>
+                <!-- //logo-wrap-->
 				
-				
+				<!--profile-photo-->
 				<div class="profile-photo">
 					<div id="holder" style="display: none;"></div>
-					<label class="" for="imgSelector"><img src="resources/images/ico-plus.png" alt="추가"></label>
-					<input type="file" id="imgSelector" style="display: none"  />
+                    <div class="file-group">
+					   <label class="" for="imgSelector"><img src="resources/images/ico-plus.png" alt="추가"></label>
+					   <input type="file" id="imgSelector" style="display: none"  />
+                    </div>
 				</div>
+                <!-- //profile-photo-->
 			
 				<input type="text" placeholder="이메일 주소" />
 				<input type="text" placeholder="성명" />

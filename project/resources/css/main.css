@@ -46,7 +46,10 @@ footer {text-align: center;    margin: 50px 0; color: #8e8e8e; font-size: 12px; 
 /* join 회원가입 */
 .profile-photo {width: 100px;height: 100px; position: relative; border-radius: 600px;background-color: #fafafa;border: 1px solid #d9d9d9;margin: 20px auto;overflow: hidden;}
 .profile-photo label {  height: 100%; cursor: pointer;  display: flex;justify-content: center;align-items: center; }
+.profile-photo .file-group {height:100%; }
+.profile-photo #holder img { position: absolute;left: 50%; top: 50%; transform: translate(-50%, -50%); max-width: none; height: 100%;}
 
+   
 
 /* list-wrap 목록 */
 .list-wrap .layout {padding: 25px; }
