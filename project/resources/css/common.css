@@ -38,3 +38,5 @@ a img {border: none;}
 ::-moz-selection{background:#31aae4;color:#fff}
 
 
+*:focus{outline: none !important;}
+.btn.active, .btn:active {box-shadow: none; }
