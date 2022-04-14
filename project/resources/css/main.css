@@ -28,7 +28,7 @@ footer {text-align: center;    margin: 50px 0; color: #8e8e8e; font-size: 12px; 
 
 
 /*login-wrap 로그인*/
-.login-wrap {width: 396px; margin: 0 auto; margin-top: 180px;text-align: center;  }
+.login-wrap {width: 396px; margin: 0 auto; margin-top: 180px;text-align: center; animation: fadeInUp 1s forwards;  }
 .login-wrap > div {background: #fff; border: 1px solid #ddd; }
 .login-wrap .group-top {min-height: 330px; padding: 36px 45px;}
 .login-wrap .group-top > .logo {margin-bottom: 40px;}
@@ -60,10 +60,20 @@ footer {text-align: center;    margin: 50px 0; color: #8e8e8e; font-size: 12px; 
 .list-wrap .list-info p{color: #000; font-weight: 300;}
 .list-wrap .list-info p strong { font-weight: 600;color: #000;}
 .list-wrap .list-cont:after{content: ""; display: block; clear: both;}
-.list-wrap .list-cont li{width: calc((100% - 56px) / 3);  height: 293px; float: left; margin-right: 28px; margin-bottom: 28px; overflow: hidden;}
+.list-wrap .list-cont li{width: calc((100% - 56px) / 3);  height: 287px; float: left; margin-right: 28px; margin-bottom: 28px; overflow: hidden;animation: fadeInUp 1s ease forwards; opacity: 0; }
+.list-wrap .list-cont li:nth-child(1){ animation-delay: 0s;}
+.list-wrap .list-cont li:nth-child(2){ animation-delay: 0.1s;}
+.list-wrap .list-cont li:nth-child(3){ animation-delay: 0.2s;}
+.list-wrap .list-cont li:nth-child(4){ animation-delay: 0.3s;}
+.list-wrap .list-cont li:nth-child(5){ animation-delay: 0.4s;}
+.list-wrap .list-cont li:nth-child(6){ animation-delay: 0.5s;}
+.list-wrap .list-cont li:nth-child(7){ animation-delay: 0.6s;}
+.list-wrap .list-cont li:nth-child(8){ animation-delay: 0.7s;}
+
+
 .list-wrap .list-cont li:nth-child(3n) {margin-right: 0;}
 .list-wrap .list-cont li a {display: block; width: 100%; height: 100%; position: relative; }
-.list-wrap .list-cont li a:hover:after {content: ""; display: block; width: 100%; height: 100%; position: absolute; left: 0; top: 0;background: rgb(0 0 0 / 46%);}
+.list-wrap .list-cont li a:hover:after {content: ""; display: block; width: 100%; height: 100%; position: absolute; left: 0; top: 0;background: rgb(0 0 0 / 46%); }
 
 @media(max-width: 1024px) {
 	.list-wrap .list-cont li {height: auto;}
@@ -80,7 +90,7 @@ footer {text-align: center;    margin: 50px 0; color: #8e8e8e; font-size: 12px; 
 
 /*detail-wrap*/
 .detail-wrap,.edit-wrap,.list-wrap {padding-top: 30px;}
-.detail-wrap .layout {display: flex; border: 1px solid #ddd;}
+.detail-wrap .layout {display: flex; border: 1px solid #ddd;animation: fadeInUp 1s ease;}
 .detail-wrap .right-part { width: 620px;position: relative; background: #fff;}
 .detail-wrap .right-part .profile-wrap.group-top {border-bottom: 1px solid #ddd;padding: 14px 4px 14px 16px; }
 .detail-wrap .right-part .group-bottom {padding: 16px;}
@@ -99,7 +109,17 @@ footer {text-align: center;    margin: 50px 0; color: #8e8e8e; font-size: 12px; 
 .detail-wrap .bottom-part {position: absolute; bottom: 0;width: 100%;}
 .detail-wrap .btn-like { font-size: 11px;color: #262626; font-weight: 900; padding: 10px 16px;}
 .detail-wrap .btn-like i {background: url(../images/like.png) no-repeat; width: 18px; height: 20px; vertical-align: middle;display: inline-block;  background-size: 100% !important; margin-right: 5px;}
-.detail-wrap .btn-like.active i {background: url(../images/like-hover.png) no-repeat;}
+.detail-wrap .btn-like.active i {background: url(../images/like-hover.png) no-repeat;animation:  heart 0.3s ease; }
+@keyframes heart {
+    0% {transform: translate(0, 0px);}
+    50% {transform: translate(0, -3px);}
+    100% {transform: translate(0, 0px);}
+    
+}
+
+
+
+
 .detail-wrap .form-wrap { border-top: 1px solid #efefef; padding: 6px 16px; position: relative;}
 .detail-wrap .form-wrap img {position: absolute;top: 14px;}  
 .detail-wrap .form-wrap textarea {width: calc(113% - 70px); height: 38px;max-height: 80px; resize: none; border: 0; background: transparent;  padding: 7px 22px 7px 40px;}
@@ -113,12 +133,13 @@ footer {text-align: center;    margin: 50px 0; color: #8e8e8e; font-size: 12px; 
 .profile-wrap strong {font-weight: 600; color: #000; margin-left: 5px;}
 .profile-wrap .btn-del { position: absolute; right: 16px;}
 
-.modal-del {display: none;  position: fixed; max-width: 400px; margin: 0 auto; top: 30%;transform: translate(-50%, 0px); left: 50%;  z-index:9; border-radius: 5px;background: #fff; }
+.modal-del {display: none;  position: fixed; max-width: 400px; margin: 0 auto; top: 30%;transform: translate(-50%, 0px); left: 50%;  z-index:9; border-radius: 5px;background: #fff; animation:  fadeInUpModal 0.5s ease;}
 .modal-del .inner { width: 400px; margin: 0 auto;text-align: center}
 .modal-del .inner .btn {display: block;  color: #000;font-weight: 600;border-bottom: 1px solid #dbdbdb; padding: 10px 12px;}
 .modal-del .inner .btn:last-of-type {border-bottom: 0;}
 .modal-del .inner .btn.txt-red {color: #ed4956;font-weight: 900;}
 .mask { display: none;  background: rgb(0 0 0 / 75%); position: fixed; top: 0; width: 100%; height: 100%; }
+
 
 
 @media (max-width: 1800px) {
@@ -134,7 +155,7 @@ footer {text-align: center;    margin: 50px 0; color: #8e8e8e; font-size: 12px; 
 
 
 /*edit-wrap*/
-.edit-wrap .layout {max-width: 686px;}
+.edit-wrap .layout {max-width: 686px;animation: fadeInUp 1s ease forwards;}
 .edit-wrap .profile-wrap {padding: 25px 25px 15px 25px;}
 .edit-wrap .textarea-wrap { padding: 0 25px 15px 25px;}
 .edit-wrap .textarea-wrap textarea { width: 100%; resize: none; border: 0; min-height: 324px; }
@@ -160,3 +181,21 @@ footer {text-align: center;    margin: 50px 0; color: #8e8e8e; font-size: 12px; 
     .edit-wrap .edit-bottom .btn-wrap { float: none; margin-top: 10px;}
     .edit-wrap .edit-bottom .btn-wrap .button {display: block; width: 100%; margin-top: 3px;}
 }
+
+
+
+
+
+
+@keyframes fadeInUp {
+    0% {opacity: 0;transform: translate(0, 50px);}
+    100% {opacity: 1;transform: translate(0, 0px);}
+}
+@keyframes fadeInUpModal {
+    0% {opacity: 0;transform: translate(-50%, 50px);}
+    100% {opacity: 1;transform: translate(-50%, 0px);}
+}
+
+
+
+
