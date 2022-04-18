@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        .box, .box2 {width: 50px; height: 50px; background: blue;}
+        .extra {border-radius: 600px;}
+        ul {background: #ddd; min-height: 50px;}
+        .input-wrap {display: flex;}
+        
+        
+        .ico-img {position: relative;animation: upNDown 0.3s forwards;margin-right: 5px; }
+        .ico-img.active {animation: upNDown2 0.3s forwards; }
+        @keyframes upNDown {
+            0%{top: -5px;}
+            100%{top: 0px;}
+        }
+    
+         @keyframes upNDown2 {
+            0%{top: 0px;}
+            100%{top: -5px;}
+        }
+        
+        
+        
+    </style>
+    
+    
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function(){
+            $('#box').click(function(){
+                $(this).css('background','red') ;      
+            });
+          $('#box2').click(function(){
+                $(this).toggleClass('extra') ;      
+            });
+          $('#btnAdd').click(function() {
+              $('.list').append('<li>텍스트가 들어갑니다</li>');
+          });
+         //$('.list').append('<li>sdfsdfsdf</li>')   
+          
+          
+          $('#btn2').click(function() {
+              $('#input1').focus();
+          });
+          
+          
+           $('#btn3').click(function() {
+              $('.input-wrap img').toggleClass('active');
+          });
+          
+    });
+    </script>
+    
+     
+   
+    
+    
+
+</head>
+<body>
+
+    
+    <h3>(문제1) 상자를 클릭했을때 상자 색깔을 빨간색으로 바꿔보세요. (.css() 사용)</h3>
+    <div class="box" id="box"></div>
+    
+
+    <h3>(문제2) 상자를 클릭할때마다 extra라는 클래스를 붙였다가 제거했다가 반복해보세요. (.toggleClass()사용) </h3>
+    <div class="box2" id="box2"></div>
+    
+    
+    <h3>(문제3) 버튼1을 클릭하면 ul안에 '&#60;li&#62;텍스트가 들어갑니다 &#60;/li&#62;' 코드가 추가 되게 만들어보세요. (.append()사용)</h3>
+    <button type="button" id="btnAdd">리스트 추가 </button>
+    <ul class="list"></ul>
+    
+    
+    <h3>(문제4) 자동포커스버튼 클릭시 하단에 있는 input에 자동으로 포커스가 가도록 만들어보세요. (.focus()사용)  </h3>
+    <button type="button" id="btn2">자동포커스</button><br><br>
+    <input type="text" id="input1">
+
+    
+    
+    <h3>(문제5) input-wrap에 포커스가 갔을때 아래와 같은 효과가 나타나게 만들어보세요. (.addClass()사용 / animation사용)  </h3>
+    <button type="button" id="btn3">아이콘 움직이게 하기</button><br><br>
+    <div class="input-wrap">
+        <img src="../images/comment.png" class="ico-img">
+        <input type="text">
+    </div>
+    
+    
+    <h3> 다 하신 분들은 프로젝트 헤더 로그아웃 토글 부분 작업을 해보세요.</h3>
+    
+    <br><br>
+    
+    
+    
+    
+    
+
+ 
+</body>
+</html>
