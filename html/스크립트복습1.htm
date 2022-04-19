@@ -14,18 +14,13 @@
         .input-wrap {display: flex;}
         
         
-        .ico-img {position: relative;animation: upNDown 0.3s forwards;margin-right: 5px; }
-        .ico-img.active {animation: upNDown2 0.3s forwards; }
+        .ico-img {position: relative;margin-right: 5px; }
+        .ico-img.active {animation: upNDown 0.5s forwards infinite; }
         @keyframes upNDown {
             0%{top: -5px;}
             100%{top: 0px;}
         }
-    
-         @keyframes upNDown2 {
-            0%{top: 0px;}
-            100%{top: -5px;}
-        }
-        
+
         
         
     </style>
@@ -86,7 +81,7 @@
 
     
     
-    <h3>(문제5) input-wrap에 포커스가 갔을때 아래와 같은 효과가 나타나게 만들어보세요. (.addClass()사용 / animation사용)  </h3>
+    <h3>(문제5) 버튼을 클릭했을때 아래와 같은 효과가 나타나게 만들어보세요. (.addClass()사용 / animation사용)  </h3>
     <button type="button" id="btn3">아이콘 움직이게 하기</button><br><br>
     <div class="input-wrap">
         <img src="../images/comment.png" class="ico-img">
@@ -94,8 +89,8 @@
     </div>
     
     
-    <h3> 다 하신 분들은 프로젝트 헤더 로그아웃 토글 부분 작업을 해보세요.</h3>
-    
+    <h3>(문제6) 다 하신 분들은 프로젝트 헤더 로그아웃 토글 부분 작업을 해보세요.</h3>
+    <img src="header.png">
     <br><br>
     
     
