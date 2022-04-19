@@ -1,0 +1,137 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        .tab,.tab2 {display: flex;}
+        .tab li,.tab2 li {width: 23%;border: 1px solid #ddd;margin-left: -1px; list-style: none;}
+        .tab li a,.tab2 li a{display: block;text-align: center;    padding: 12px 0;}
+        .tab li.active {background: red;}
+        .tab2 li {position: relative; }
+        .tab2 li:after {content: ""; width: 0%; height: 3px; background: red; display: none;  position: absolute; left: 0; bottom: 0;}
+        .tab2 li:hover:after, .tab2 li.active:after {display: block;  animation: widthAnime 0.5s ease forwards;}
+        @keyframes widthAnime {
+            0%{width: 0;}
+            100% {width: 100%;}
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+ 
+        .modal {display: none; }
+        .mask {background: rgb(0 0 0 / 48%);width: 100%; height: 100%; position: fixed; top: 0;left: 0;   }
+        .box {  background: #fff; position: absolute; z-index: 99;left: 50%;  margin-left: -25px;}
+        
+        
+        
+        
+        
+        
+    </style>
+    
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function(){
+          
+          
+          
+          
+          
+            $('#tab li').click(function(){
+                $(this).addClass('active');
+                $(this).siblings().removeClass('active');
+            });
+          
+           $('#tab2 li').click(function(){
+                $(this).addClass('active');
+                $(this).siblings().removeClass('active');
+            });
+          
+          
+        
+            $('#btn').click(function(){
+                $('.modal').toggle();
+            });
+           $( '#btn12' ).click(function(e){
+                e.stopPropagation(); //stopPropagation 은 부모태그로의 이벤트 전파를 stop 중지하라는 의미입니다.
+                $('#modal').show();
+            });
+          
+           $( '#del' ).click(function(){
+                $('#modal').hide();
+            });
+           $( document ).click(function(){
+                $('#modal').hide();
+            });
+         
+         
+          
+    });
+    </script>
+    
+     
+   
+    
+    
+
+</head>
+<body>
+
+    <h3>(문제1) 아래이미지 처럼 스타일을 잡고, 클릭했을 때는 빨간색 하트, 다시 클릭했을때는 라인하트가 나오게끔 해보세요.  </h3><br>
+    <img src="notactive.png">
+    <img src="active.png">
+    <br>
+
+
+    <h3>(문제2) 아래와 같이 탭을 만들고 li를 클릭하면 각각의 탭에 색깔이 들어오게 해보세요. (addClass, removeClass, siblings사용)  <br> -  같이 실습해볼 예정입니다. 일단 css  만들어서 한번 시도해보고 계세요!! 안 된다 생각하고 그냥 시도만 ㅎㅎㅎ </h3><br>
+    <ul id="tab" class="tab">
+        <li class="active"><a href="#">탭1</a></li>
+        <li><a href="#">탭2</a></li>
+        <li><a href="#">탭3</a></li>
+        <li><a href="#">탭4</a></li>
+    </ul>
+    <br>
+    
+    
+    <h3>(문제3) 아래와같은 active 스타일을 만들어보세요. (animation, :after사용)</h3><br>
+    <ul id="tab2" class="tab2">
+        <li class=""><a href="#">탭1</a></li>
+        <li><a href="#">탭2</a></li>
+        <li><a href="#">탭3</a></li>
+        <li><a href="#">탭4</a></li>
+    </ul>
+    <br>
+    
+    
+    <h3>(문제4) 아래 버튼 클릭시  모달창이 띄워지고, 안쪽에 삭제버튼 클릭할 시 모달창이 닫히게 만들어보세요. (position fixed 사용) <br> - 이것도 같이 실습해볼 예정입니다.  이것도 그냥 시도만해주세요ㅎㅎㅎㅎ</h3>
+    <button type="button" id="btn12">버튼</button>
+    <div class="modal" id="modal">
+        <div class="box">
+            <a href="#" id="del">삭제버튼</a>
+        </div>
+        <div class="mask"></div>
+    </div>
+    <br>
+    <br>
+    
+     
+    
+    
+    
+    
+    
+    
+
+ 
+</body>
+</html>
