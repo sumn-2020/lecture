@@ -8,6 +8,8 @@
 	<title>Document</title>
 
 	<link rel="stylesheet" href="../project/resources/css/common.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
+	
 	<style>
 		table {
 			border-collapse: collapse;
@@ -64,11 +66,13 @@
 		.close {  position: absolute;right: -80px;top: -11px;}
 		
 		
+		.slider{width: 100%;}
 		
 		
 	</style>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 	<script>
 		$(document).ready(function() {
 
@@ -104,8 +108,9 @@
 				$(this).siblings().removeClass('active');
 			});
 
-			$('#search').click(function(){
-				$('.search-result').toggleClass('active');
+			$('#search').click(function(e){
+				e.stopPropagation();
+				$('.search-result').toggle();
 			});
 			
 			$('#sitemap').click(function(e){
@@ -119,8 +124,20 @@
 			
 			$(document).click(function(){
 				$('.sitemap-result').hide();
+				$('.search-result').hide();
 			});
 		
+			
+			
+			$('.slider').slick({
+			  infinite: true,
+			  slidesToShow: 1, 
+			  slidesToScroll: 1,
+			  arrows: true, 
+			  dots: true 
+			});
+			
+			
 
 		});
 	</script>
@@ -221,7 +238,13 @@
 	</header>
 	<br><br><br><br>
 	
-	<h3>(문제3) </h3>
+	<h3>(문제3) 슬라이드 만들기  </h3>
+	<div class="slider">
+		<div class="item"><img src="../images/sample.jpg"></div>
+		<div class="item"><img src="../images/sample.jpg"></div>
+		<div class="item"><img src="../images/sample.jpg"></div>
+		<div class="item"><img src="../images/sample.jpg"></div>
+	</div>
 	
 	
 
