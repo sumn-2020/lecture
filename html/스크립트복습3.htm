@@ -11,6 +11,8 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
 
 	<style>
+		*{font-size: 16px;}
+		h3 { font-size: 20px;font-weight: 600;line-height: 39px;}
 		table {
 			border-collapse: collapse;
 			margin-top: 15px;
@@ -36,12 +38,6 @@
 			padding: 15px;
 		}
 
-
-		button {
-			cursor: pointer;
-			background: none;
-			border: 0;
-		}
 
 		header {
 			padding: 0px 35px;
@@ -98,6 +94,8 @@
 		.slick-arrow {position: absolute;top: 50%;background: #000; color: #fff;   padding: 15px 25px; }
 		.controls .next  {right: 0;}
 		
+		
+		.box {width: 120px; height: 120px; background: red; }
 
 	</style>
 
@@ -155,7 +153,6 @@
 			});
 
 
-
 			$('.slider').slick({
 				infinite: true,
 				slidesToShow: 1,
@@ -179,7 +176,7 @@
 
 
 
-	<h3>(문제1) 버튼 클릭시 테이블 속 행이 추가되게 만들어보세요. </h3><br>
+	<h3>(문제) 버튼 클릭시 테이블 속 행이 추가되게 만들어보세요. </h3><br>
 	<button type="button" id="addTr" class="btn-table">행 추가</button>
 	<table>
 		<thead>
@@ -216,17 +213,12 @@
 		table th {
 			background: rgb(255 197 159 / 52%);
 		}
-
-
 	</xmp>
-
-
-
 
 
 	<br><br><br><br>
 
-	<h3>(문제2) <br> (1)메뉴를 호버 했을때 하단에 드롭다운 형식으로 하위 메뉴가 보이도록 만들어보세요. (메뉴1에 호버를하면 active클래스가 붙게되고, 메뉴1에 active가 붙었을경우 그 하단에 있는 메뉴2가 보이게 하면됨, toggleClass사용, click대신 hover사용)
+	<h3>(문제) <br> (1)메뉴를 호버 했을때 하단에 드롭다운 형식으로 하위 메뉴가 보이도록 만들어보세요. (메뉴1에 호버를하면 active클래스가 붙게되고, 메뉴1에 active가 붙었을경우 그 하단에 있는 메뉴2가 보이게 하면됨, toggleClass사용, click대신 hover사용)
 		<br>(2) 돋보기 아이콘 클릭했을때 아래와 같이 동작하도록 만들어보세요.
 		<br>(3) 메뉴 아이콘 클릭했을때 아래와 같이 동작하도록 만들어보세요.</h3><br><br>
 
