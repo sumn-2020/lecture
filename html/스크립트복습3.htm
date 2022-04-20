@@ -1,0 +1,165 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+
+        
+    </style>
+    
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+    
+	$( document ).ready(function() {
+        
+        
+        
+        //https://developer-talk.tistory.com/331
+        
+        /*//파일 업로드 미리보기 
+		function readURL(input) {
+            
+				if (input.files && input.files[0]) { // 인풋 태그에 파일이 있는 경우
+                
+						var reader = new FileReader();   //FileReader() 객체는 비동기적으로 파일의 내용을 읽어들이는 데 사용 (FileReader 인스턴스 생성)
+                        
+						reader.onload = function (e) { //이미지가 로드가 된 경우
+								$('#holder').show();
+								$('#holder').append('<img src="' + e.target.result + '">');
+                                $('.file-group').hide();
+						}
+						reader.readAsDataURL(input.files[0]); // reader가 이미지 읽도록 하기
+				}
+        }
+                
+       $("input:file").change(function(){   //input file에 change 이벤트 부여
+					readURL(this);
+        });*/
+        
+        
+        
+        
+            var array = ['사과', '배', '귤'];
+            $('#btn1').click(function() {
+                 $('#answer').html(array[0]);
+            });
+            $('#btn2').click(function() {
+                $('#answer').html(array[1]);        
+            });
+            $('#btn3').click(function(){
+                $('#answer').html(array[2]);           
+            });
+            //html은 append보다 느리다. 선택한 요소 밑에 놈들을 싹다 지우고 추가됨.(이기적이다)
+            //append는 html보다 빠르다. 선택한 요소 밑에 놈들은 유지시키고 그 놈들 제일 밑에 추가됨.(공존한다)
+
+
+
+
+        
+        
+        
+        
+	});
+    </script>
+    
+
+</head>
+<body>
+
+ 
+    
+    <h3>(문제1)</h3>
+    <button type="button">버튼</button>
+    
+    
+    
+    
+    
+    <br><br><br><br>
+    
+    
+    <h3>(문제1) 사과, 배, 귤 각각의 버튼 클릭시 각각 해당 텍스트가 나타나게 해보세요. (배열 사용) </h3>
+    <button type="button" id="btn1">사과</button>
+    <button type="button" id="btn2"> 배</button>
+    <button type="button" id="btn3">귤</button><br>
+    답: <strong id="answer"></strong>
+    
+    <br><br><br><br>
+    
+    
+    
+    
+    <h3></h3>
+    
+<!--    
+    객체 = 커피 캐리어 / 여러 정보{property)와 정보를 활용하는 메소드 를 합쳐 놓은 덩어리
+    커피 캐리어에는 커피를 여러잔 담을 수 있다.
+    커피 캐리어는 용도에 따라 종류가 여러가지 있다.
+    프로그래밍을 할 때 상황에 따라 서로 다른 종류의 객체 여러개가 필요하다. 
+    객체는 너무 커서 변수에 담을 수 없다.그래서 또 고안된 것이 리모콘 시스템이다.
+    
+    
+    프로그램에서 객체를 사용하는 이유는 크게 2가지가 있습니다.
+    1) 관련있는 정보의 연결을 위해서 사용
+    2) 코드의 유지 보수가 편합니다.
+       왜냐하면 관련된 모든 정보가 객체에 모두 존재하기 때문입니다.
+    
+    
+    
+    
+    
+비슷한 성질을 가진 여러개의 객체를 만들기 위해, 
+일종의 설계도라고 할 수 있는 생성자 함수(Constructor)를 만들어 찍어내듯 사용하는데 
+이렇게 생성된 객체를 인스턴스라 부를 수 있다.
+    
+좀 더 알기 쉽게 칼을 만드는 과정으로 비유하여 다음과 같은 예시 코드를 작성해봤다.
+생성자 함수(Constructor) = 거푸집
+인스턴스 = 거푸집으로 찍어낸 칼
+    
+    -->
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <input type="file">
+    <div id="holder"></div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+ 
+</body>
+</html>
