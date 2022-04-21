@@ -2,79 +2,163 @@
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
-	<link style="stylesheet" href="mVisual.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../project/resources/css/common.css">
+    <link rel="stylesheet" href="../project/resources/css/fonts.css">
+    <link rel="stylesheet" href="./mVisual.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script>
+        $(document).ready(function() {
+
+            var deps01 = $('.deps01');
+            
+            $('.mVisual').slick({
+                infinite: true,
+                fade: true,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows: true,
+                dots: false,
+                prevArrow: $('#prev'),
+                nextArrow: $('#next'),
+            });
+
+
+            $('.sitemap').click(function() {
+                $('.sitemap-result').toggleClass('active');
+            });
+
+
+
+            deps01.hover(function() {
+                $(this).children('.deps02').toggle();
+            });
+            deps01.click(function() {
+                $(this).toggleClass('active');
+                $(this).siblings().removeClass('active');
+            });
+
+            $('.close').click(function() {
+                $('.sitemap-result').toggleClass('active');
+            });
+            
+            
+            
+        });
+    </script>
+
+
+
 </head>
 
 <body>
-	<header>
-		<h1 class="logo">
-			<a href="#">
-				<img src="../images/jk_logo.png" alt="로고">
-			</a>
-		</h1>
-		<ul class="deps01-wrap">
-			<li class="deps01">
-				<a href="#">메뉴1</a>
-				<ul class="deps02">
-					<li><a href="#">메뉴2</a></li>
-					<li><a href="#">메뉴2</a></li>
-					<li><a href="#">메뉴2</a></li>
-					<li><a href="#">메뉴2</a></li>
-				</ul>
-			</li>
-			<li class="deps01">
-				<a href="#">메뉴1</a>
-				<ul class="deps02">
-					<li><a href="#">메뉴2</a></li>
-					<li><a href="#">메뉴2</a></li>
-					<li><a href="#">메뉴2</a></li>
-					<li><a href="#">메뉴2</a></li>
-				</ul>
-			</li>
-			<li class="deps01">
-				<a href="#">메뉴1</a>
-				<ul class="deps02">
-					<li><a href="#">메뉴2</a></li>
-					<li><a href="#">메뉴2</a></li>
-					<li><a href="#">메뉴2</a></li>
-					<li><a href="#">메뉴2</a></li>
-				</ul>
-			</li>
-			<li class="deps01">
-				<a href="#">메뉴1</a>
-				<ul class="deps02">
-					<li><a href="#">메뉴2</a></li>
-					<li><a href="#">메뉴2</a></li>
-					<li><a href="#">메뉴2</a></li>
-					<li><a href="#">메뉴2</a></li>
-				</ul>
+    <header>
+        <h1 class="logo">
+            <a href="#">
+                <img src="../images/jk_logo.png" alt="로고">
+            </a>
+        </h1>
+        <ul class="gnb-wrap">
+            <li class="deps01 active">
+                <a href="#">메뉴1</a>
+                <ul class="deps02">
+                    <li><a href="#">메뉴2</a></li>
+                    <li><a href="#">메뉴2</a></li>
+                    <li><a href="#">메뉴2</a></li>
+                    <li><a href="#">메뉴2</a></li>
+                </ul>
+            </li>
+            <li class="deps01">
+                <a href="#">메뉴1</a>
+                <ul class="deps02">
+                    <li><a href="#">메뉴2</a></li>
+        
+                </ul>
+            </li>
+            <li class="deps01">
+                <a href="#">메뉴1</a>
+                <ul class="deps02">
+                    <li><a href="#">메뉴4</a></li>
+                    <li><a href="#">메뉴5</a></li>
+                    <li><a href="#">메뉴6</a></li>
+                 
+                </ul>
+            </li>
+            <li class="deps01">
+                <a href="#">메뉴1</a>
+                <ul class="deps02">
+                    <li><a href="#">메뉴3</a></li>
+                    <li><a href="#">메뉴3</a></li>
+                    <li><a href="#">메뉴3</a></li>
+                    <li><a href="#">메뉴3</a></li>
+                </ul>
 
-			</li>
-		</ul>
-		<div class="util-wrap">
-			<button type="button" id="search" class="search"><img src="../images/search-black.png"></button>
-			<button type="button" id="sitemap" class="sitemap"><img src="../images/util.png"></button>
-		</div>
-		<div class="search-result">
-			<div class="inner">
-				<input type="text">
-				<button type="button" class="btn"><img src="../images/search.png"></button>
-			</div>
-		</div>
-		<div class="sitemap-result">
-			<div class="inner">
-				<a href="#">사이트맵메뉴1</a>
-				<a href="#">사이트맵메뉴1</a>
-				<a href="#">사이트맵메뉴1</a>
-				<a href="#">사이트맵메뉴1</a>
-				<button type="button" class="close"><img src="../images/sitemapclose.png" alt="사이트맵닫기"></button>
-			</div>
-		</div>
-	</header>
+            </li>
+        </ul>
+        <div class="util-wrap">
+            <!--<button type="button" id="search" class="search"><img src="../images/search-black.png"></button>-->
+            <button type="button" id="sitemap" class="sitemap"><img src="../images/util.png"></button>
+        </div>
+        <div class="search-result">
+            <div class="inner">
+                <input type="text">
+                <button type="button" class="btn"><img src="../images/search.png"></button>
+            </div>
+        </div>
+        <div class="sitemap-result">
+            <div class="inner">
+                <strong>전체메뉴</strong>
+                <ul>
+                    <li>
+                        <strong>메뉴제목1</strong>
+                        <a href="#">사이트맵메뉴1</a>
+                        <a href="#">사이트맵메뉴1</a>
+                        <a href="#">사이트맵메뉴1</a>
+                        <a href="#">사이트맵메뉴1</a>
+                    </li>
+                     <li>
+                        <strong>메뉴제목2</strong>
+                        <a href="#">사이트맵메뉴1</a>
+                        <a href="#">사이트맵메뉴1</a>
+                        <a href="#">사이트맵메뉴1</a>
+                        <a href="#">사이트맵메뉴1</a>
+                    </li>
+                </ul>
+                <button type="button" class="close"><img src="../images/sitemapclose.png" alt="사이트맵닫기"></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- mVisual -->
+    <div class="mVisual-wrap">
+        <div class="mVisual">
+            <div class="item item01">
+                <div class="txt">
+                    <span>KAFE서비스</span>
+                    <strong>THE KOREAN ACCESS FEDERATION</strong>
+                    <p>KAFE(Korean Acess Federation, 연구교육인증연합)는 ID 연계(Identit Federation)기술을 기반으로<br>
+                        연구 및 교육 분야의 사용자 인증 연계를 실현하기 위한 연합체입니다. </p>
+                </div>
+            </div>
+            <div class="item item02">
+                <div class="txt">
+                    <span>KAFE서비스2</span>
+                    <strong>THE KOREAN ACCESS FEDERATION</strong>
+                    <p>KAFE(Korean Acess Federation, 연구교육인증연합)는 ID 연계(Identit Federation)기술을 기반으로 </p>
+                </div>
+
+            </div>
+        </div>
+        <button type="button" class="prev" id="prev">이전</button>
+        <button type="button" class="next" id="next">다음</button>
+    </div>
+    <!-- //mVisual-->
 
 
 

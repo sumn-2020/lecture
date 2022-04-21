@@ -1,1 +1,76 @@
 @charset "utf-8";
+button {cursor: pointer;}
+
+
+/*header*/
+header {border-bottom: 1px solid #ddd;padding: 0px 30px; position: relative; }
+header:after {content: ""; display: block; clear: both;}
+header .logo { padding-top: 25px;}
+header .logo, header .deps01-wrap {float: left;}
+
+header .gnb-wrap { padding-left: 715px;}
+header .gnb-wrap:after {content: ""; display: block; clear: both;}
+header .gnb-wrap .deps01 {float: left;} 
+header .gnb-wrap .deps01 a {display: block;padding: 25px 35px; position: relative; }
+header .gnb-wrap .deps01 > a:hover {text-decoration: none; }
+header .gnb-wrap .deps01 > a:after {display: none;   content: "";  width: 100%; height: 0; background:  red; position: absolute; bottom: 0; left: 0; }
+header .gnb-wrap .deps01 > a:hover:after,
+header .gnb-wrap .deps01.active > a:after {display: block; height: 3px; animation: width 0.5s forwards;}
+@keyframes width {
+    0%{height: 0; }
+    100%{height: 3px; }
+}
+
+header .gnb-wrap .deps02 {display: none; position: absolute;  z-index: 9;  background: #fff; width: 100%; left: 0;    border-top: 1px solid #ddd;}
+header .gnb-wrap .deps02 li {display: inline-block;}
+header .util-wrap {position: absolute; right: 30px; top: 13px;}
+header .util-wrap button {border: 0; background: none; }
+header .search-result,
+header .sitemap-result  {display: none; }
+header .sitemap-result {position: fixed; top: -1000px; background: #18191b; width: 100%; height: 100%; z-index: 999;left: 0; opacity: 0;}
+header .sitemap-result.active {display: block;opacity: 1;animation: fadeInDown 0.3s forwards;}
+@keyframes fadeInDown {
+    0% {top: -1000px; opacity: 0;}
+    100% {top: 0;opacity: 1;}
+}
+
+
+    
+header .sitemap-result .inner  {position: absolute; left: 30%;top: 20%;width: 750px;}
+header .sitemap-result .inner * {color: #fff; display: block; }
+header .sitemap-result .inner > strong { font-size: 35px; display: block; padding-bottom: 65px;font-weight: 300;}
+header .sitemap-result .inner ul:after {content: "";display: block; clear: both; }
+header .sitemap-result .inner ul li {float: left;width: 190px;}
+header .sitemap-result .inner ul li a {display: block; padding-bottom: 10px;padding-left: 19px;}
+header .sitemap-result .inner ul strong {position: relative; padding-left: 20px; font-size: 22px; font-weight: 600; margin-bottom: 29px;}
+header .sitemap-result .inner ul strong:after{content: ""; display: block; width: 5px; height: 5px; background: red; position: absolute; top: 10px; left: 0;}
+header .sitemap-result .inner .close {position: absolute; top: 0; right: 0; background: none; border: 0;}
+
+
+/*mVisual-wrap*/
+.mVisual-wrap { position: relative;}
+.mVisual-wrap .mVisual { height: 500px; width: 100%; }
+.mVisual-wrap .item {height: 500px; background-size: 100%; background-repeat: no-repeat; position: relative; }
+.mVisual-wrap .item01 {background-image: url(../images/mainVisual01.jpg);}
+.mVisual-wrap .item02 {background-image: url(../images/mainVisual02.jpg);}
+.mVisual-wrap .txt {position: absolute; left: 220px; top: 300px;opacity: 0;transition: all 5s ease;}
+.mVisual-wrap .txt * {color: #fff; }
+.mVisual-wrap .txt span {display: block; }
+.mVisual-wrap .txt strong {font-size: 42px;display: block;margin: 17px 0 57px 0;}
+.mVisual-wrap  .slick-current .txt {animation: fadeInUP 1s ease forwards; transition: all 5s ease;}
+@keyframes fadeInUP {
+    0% {top: 200px; opacity: 0;}
+    100%{top: 110px;opacity: 1;}
+}
+
+.mVisual-wrap  .slick-arrow { background: #000; border: 0; color: #fff; width: 50px;height: 50px;border-radius: 100%; position: absolute; top: 50%; }
+.mVisual-wrap  .slick-arrow.next {left: 30px; }
+.mVisual-wrap  .slick-arrow.prev {right: 30px;}
+
+
+
+
+
+
+
+
