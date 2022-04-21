@@ -107,20 +107,20 @@
 			//파일 업로드 미리보기 
 			function readURL(input) {
 
-				if (input.files && input.files[0]) {
+				if (input.files && input.files[0]) {  // 인풋 태그에 파일이 있는 경우
 
-					var reader = new FileReader();
+					var reader = new FileReader(); // 파일의 내용을 읽어들이는 데 사용
 
-					reader.onload = function(e) {
+					reader.onload = function(e) { //이미지가 로드가 된 경우
 						$('#holder').show();
 						$('#holder').append('<img src="' + e.target.result + '">');
 						$('.file-group').hide();
 					}
-					reader.readAsDataURL(input.files[0]);
+					reader.readAsDataURL(input.files[0]);  // reader가 이미지 읽도록 하기
 				}
 			}
 
-			$("input:file").change(function() {
+			$("input:file").change(function() { //input file에 change 이벤트 부여
 				readURL(this);
 			});
 
@@ -364,21 +364,27 @@
 		//파일 업로드 미리보기
 		function readURL(input) {
 
-			if (input.files && input.files[0]) {
+				if (input.files && input.files[0]) {  // 인풋 태그에 파일이 있는 경우
 
-				var reader = new FileReader();
+					var reader = new FileReader(); 
+					// FileReader()객체 생성 후 아래 네가지 함수 중 하나를 호출하여 file을 읽어서 result에 속성 저장
+					// reader.readAsText(File); (텍스트로 읽음)
+					// reader.readerAsDataURL(File); (데이터를 url표현으로 변환)
+					// reader.readAs ArrayBuffter(File); (배열 버퍼로 읽음)
+					// reader.readAsBinaryString(File); (비트 문자열로 읽음)
+					
 
-				reader.onload = function(e) {
-					$('#holder').show();
-					$('#holder').append('<img src="' + e.target.result + '">');
-					$('.file-group').hide();
+					reader.onload = function(e) { // 이미지가 로드가 된 경우 
+						$('#holder').show();
+						$('#holder').append('<img src="' + e.target.result + '">');
+						$('.file-group').hide();
+					}
+					reader.readAsDataURL(input.files[0]);  // reader가 이미지 읽도록 하기
 				}
-				reader.readAsDataURL(input.files[0]);
 			}
-		}
 
-		$("input:file").change(function() {
-			readURL(this);
+			$("input:file").change(function() { //input file에 change 이벤트 부여
+				readURL(this);
 		});
 
 	</xmp>
