@@ -12,13 +12,23 @@
 		document.addEventListener('DOMContentLoaded', function() {
 
             
+ 
+            let btn = document.querySelector('#btn');
+            let span = document.querySelector('#span');
             
-            let hour = 7;
-        
-            if(hour < 10 && hour > 6) {
-                alert('영업시간이 아닙니다.');
+            
+            
+            function apple(e) {
+              e.target;
+                console.log(e.target);
+                
             }
-			
+            document.addEventListener('click', apple);
+            
+            
+            
+            
+
 			
 		});
     </script>
@@ -26,15 +36,9 @@
 </head>
 
 <body>
-
-
-	<button type="button" id="btn1">딸기</button>
-	<button type="button" id="btn2">귤</button>
-	<button type="button" id="btn3">수박</button>
-	정답: <span id="answer"></span>
-
-
-
+    
+    <button type="button" id="btn">버튼</button>
+    <span id="span">상자</span>
 
 
 
